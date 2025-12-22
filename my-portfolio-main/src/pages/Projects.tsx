@@ -14,14 +14,17 @@ import { RiNextjsFill } from "react-icons/ri";
 import { Project } from '../types';
 import nodeImage from '../images/node-image-interface.png';
 import chatImage from '../images/chat-app.png';
-import mriImage from '../images/mri-classification.png';
+import engineRatingImage from '../images/engine-rating.png';
 import interImage from '../images/interview.png';
 import stackhiveimg from '../images/stackhiveimg.png';
 
 import { GrDeploy, GrKubernetes } from "react-icons/gr";
 
-import utilisationImage from '../images/utilisation.png';
+import energyInsightImage from '../images/energy-insight.png';
+import optirouteImage from '../images/optiroute.png';
 import crmImage from '../images/crm.png';
+
+
 
 const techIcons: { [key: string]: JSX.Element } = {
   "Nextjs": <RiNextjsFill />,
@@ -102,25 +105,36 @@ const staticProjects: Project[] = [
     title: "Engine Rating Prediction",
     description:
       "End-to-end ML system using LightGBM to predict vehicle engine health from 60+ real-world parameters (R²=0.7). Performed feature engineering & tuning for production-ready predictions.",
-    image: { url: mriImage }, // Use placeholder or relevant image if available
+    image: { url: engineRatingImage },
     techUsed: "Python, Streamlit, LightGBM, Scikit-Learn",
-    link: "https://github.com/diya-matani/Engine-Rating-Prediction"
+    githubLink: "https://github.com/diya-matani/Engine-Rating-Prediction",
+    demoLink: "https://energyinsight.streamlit.app/"
   },
   {
     title: "Energy Insight",
     description:
       "AI-based energy optimization system using Random Forest to predict heating/cooling loads. Integrated Google Gemini Pro API to generate human-readable energy-saving recommendations.",
-    image: { url: utilisationImage }, // Utilisation chart fits Energy theme
+    image: { url: energyInsightImage },
     techUsed: "Python, Streamlit, Scikit-learn, Google Gemini Pro API",
-    link: "https://github.com/diya-matani/Energy-Insight-"
+    githubLink: "https://github.com/diya-matani/Energy-Insight-",
+    demoLink: "https://energyinsight.streamlit.app/"
+  },
+  {
+    title: "OptiRoute",
+    description: "Intelligent vehicle routing optimization system designed to minimize travel time and fuel consumption using advanced pathfinding algorithms. Tuned for efficiency in logistics and delivery networks.",
+    image: { url: optirouteImage },
+    techUsed: "Python, AI/ML, Optimization",
+    githubLink: "https://github.com/diya-matani/OptiRoute",
+    demoLink: "https://optiroutev1.streamlit.app/"
   },
   {
     title: "Marketing Campaign Analytics",
     description:
       "Analyzed 64,000+ customer records using Logistic Regression to predict conversion probability. Validated insights with A/B testing (Chi-Square, T-Test) for data-driven decision making.",
-    image: { url: crmImage }, // CRM fits Marketing theme
+    image: { url: crmImage },
     techUsed: "Python, Streamlit, Scikit-learn, Statistical Testing",
-    link: "https://github.com/diya-matani/Market-Campaign-Performance-Analytics"
+    githubLink: "https://github.com/diya-matani/Market-Campaign-Performance-Analytics",
+    demoLink: "https://marketcampaignperformanceanalytics.streamlit.app/"
   }
 ];
 
@@ -131,27 +145,14 @@ const Projects: React.FC = () => {
     <div className="projects-container">
       <div className="projects-grid">
         {projects.map((project, index) => {
-          const isClickable = project.link && project.link !== '#';
           return (
             <div
               key={index}
               className="project-card"
-              role={isClickable ? "link" : "group"}
-              tabIndex={0}
-              aria-label={`${project.title} — ${project.description}`}
-              title={isClickable ? `Open: ${project.title}` : project.title}
+              role="article"
               style={{
                 '--delay': `${index * 0.1}s`,
-                cursor: isClickable ? 'pointer' : 'default'
               } as React.CSSProperties}
-              onClick={() => isClickable && window.open(project.link, '_blank')}
-              onKeyDown={(e) => {
-                if (!isClickable) return;
-                if (e.key === 'Enter' || e.key === ' ') {
-                  e.preventDefault();
-                  window.open(project.link, '_blank');
-                }
-              }}
             >
               <img src={project.image.url} alt={`${project.title} screenshot`} className="project-image" />
               <div className="project-details">
@@ -166,6 +167,29 @@ const Projects: React.FC = () => {
                       </span>
                     );
                   })}
+                </div>
+
+                <div className="project-links">
+                  {project.githubLink && (
+                    <a
+                      href={project.githubLink}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="btn-link btn-github"
+                    >
+                      <FaGithub /> GitHub
+                    </a>
+                  )}
+                  {project.demoLink && (
+                    <a
+                      href={project.demoLink}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="btn-link btn-demo"
+                    >
+                      <FaChartBar /> Output
+                    </a>
+                  )}
                 </div>
               </div>
             </div>

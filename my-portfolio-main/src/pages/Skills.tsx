@@ -34,33 +34,29 @@ import { Skill } from "../types";
 
 const skillsData: Skill[] = [
   // Languages
-  { name: "Python", description: "AI/ML, Scripting, Backend Development", icon: "FaPython", category: "Languages" },
-  { name: "SQL", description: "Database querying and management", icon: "FaDatabase", category: "Languages" },
+  { name: "Python", description: "General Purpose Language", icon: "FaPython", category: "Languages" },
+  { name: "C++", description: "Competitive Programming", icon: "SiCplusplus", category: "Languages" },
+  { name: "SQL", description: "Relational Database Querying", icon: "FaDatabase", category: "Languages" },
 
-  // AI / ML / GenAI
-  { name: "Machine Learning", description: "Model training, evaluation & explainable AI", icon: "SiScikitlearn", category: "AI & ML" },
-  { name: "GenAI", description: "Gemini Pro API, Prompt Engineering, RAG", icon: "FaChartBar", category: "AI & ML" },
-  { name: "Feature Engineering", description: "Data transformation for predictive modeling", icon: "FaToolbox", category: "AI & ML" },
+  // AI & ML
+  { name: "Machine Learning", description: "Predictive Modeling", icon: "SiScikitlearn", category: "AI & ML" },
+  { name: "GenAI", description: "LLMs & RAG", icon: "FaChartBar", category: "AI & ML" },
+  { name: "Scikit-learn", description: "ML Algorithms", icon: "SiScikitlearn", category: "AI & ML" },
+  { name: "Pandas", description: "Data Analysis", icon: "SiPandas", category: "AI & ML" },
+  { name: "NumPy", description: "Numerical Computing", icon: "SiNumpy", category: "AI & ML" },
 
-  // Libraries
-  { name: "Scikit-learn", description: "Standard ML algorithms & pipelines", icon: "SiScikitlearn", category: "Libraries" },
-  { name: "LightGBM", description: "Gradient boosting framework", icon: "FaChartBar", category: "Libraries" },
-  { name: "Pandas", description: "Data manipulation & analysis", icon: "SiPandas", category: "Libraries" },
-  { name: "NumPy", description: "Numerical computing", icon: "SiNumpy", category: "Libraries" },
-  { name: "SciPy", description: "Scientific computing", icon: "FaChartBar", category: "Libraries" },
+  // Backend & Web
+  { name: "Flask", description: "Backend Framework", icon: "FaServer", category: "Backend & Web" },
+  { name: "Streamlit", description: "Data Apps", icon: "FaLaptopCode", category: "Backend & Web" },
+  { name: "React", description: "Frontend Library", icon: "FaReact", category: "Backend & Web" },
 
-  // Backend & Deployment
-  { name: "Flask", description: "Microservices & API development", icon: "FaServer", category: "Backend & Deployment" },
-  { name: "Streamlit", description: "Rapid data app prototyping & deployment", icon: "FaLaptopCode", category: "Backend & Deployment" },
+  // Databases
+  { name: "PostgreSQL", description: "Advanced RDBMS", icon: "SiPostgresql", category: "Databases" },
+  { name: "MySQL", description: "Standard RDBMS", icon: "SiMysql", category: "Databases" },
 
-  // Data Engineering
-  { name: "ETL Pipelines", description: "Data cleaning, validation & transformation workflows", icon: "FaChartBar", category: "Data Engineering" },
-
-  // Databases & Tools
-  { name: "PostgreSQL", description: "Advanced relational database management", icon: "SiPostgresql", category: "Databases & Tools" },
-  { name: "MySQL", description: "Standard RDBMS", icon: "SiMysql", category: "Databases & Tools" },
-  { name: "Git & GitHub", description: "Version control & collaboration", icon: "FaGitAlt", category: "Databases & Tools" },
-  { name: "VS Code", description: "Primary development environment", icon: "SiVisualstudiocode", category: "Databases & Tools" },
+  // Tools
+  { name: "Git & GitHub", description: "Version Control", icon: "FaGitAlt", category: "Tools" },
+  { name: "VS Code", description: "Development Environment", icon: "SiVisualstudiocode", category: "Tools" },
 ];
 
 const iconMap: { [key: string]: JSX.Element } = {
@@ -84,11 +80,18 @@ const iconMap: { [key: string]: JSX.Element } = {
   FaToolbox: <FaToolbox aria-hidden />,
   FaCode: <FaCode aria-hidden />,
   FaDatabase: <FaDatabase aria-hidden />,
+  TbBrandVscode: <SiVisualstudiocode aria-hidden />, // Map Tb to SiVis since it's available
 };
 
 const Skills: React.FC = () => {
-  // group and keep a predictable order of categories
-  const orderedCategories = ["Languages", "AI & ML", "Libraries", "Backend & Deployment", "Data Engineering", "Databases & Tools"];
+  const orderedCategories = [
+    "Languages",
+    "AI & ML",
+    "Backend & Web",
+    "Databases",
+    "Tools"
+  ];
+
   const grouped: Record<string, Skill[]> = skillsData.reduce((acc, skill) => {
     if (!acc[skill.category]) acc[skill.category] = [];
     acc[skill.category].push(skill);

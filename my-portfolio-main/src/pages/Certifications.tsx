@@ -19,42 +19,35 @@ const staticCertifications: Certification[] = [
     title: "Applied Machine Learning in Python",
     issuer: "Coursera",
     issuedDate: "2024",
-    link: "#",
+    link: "https://drive.google.com/file/d/1p04og76YTWOLe2eAWU1ESSaiAELld1mI/view?usp=sharing",
     iconName: "coursera"
   },
   {
     title: "Cloud Computing",
     issuer: "NPTEL",
     issuedDate: "2024",
-    link: "#",
+    link: "https://drive.google.com/file/d/1AueDBdizoypsvSwyM2H-HP15Fa43qswr/view?usp=sharing",
     iconName: "university"
   },
   {
-    title: "HackOn With Amazon (2nd Round)",
-    issuer: "Amazon / CodeHer'25",
-    issuedDate: "2024",
-    link: "#",
-    iconName: "ieee"
+    title: "Limca Book of Records",
+    issuer: "Trendz Abacus",
+    issuedDate: "Awarded",
+    link: "https://drive.google.com/file/d/1zWHmqGsA9EFi0Y9VTrtmddcuT4j28tUa/view?usp=sharing",
+    iconName: "university"
+  },
+  {
+    title: "Indian Book of Records",
+    issuer: "Trendz Abacus",
+    issuedDate: "Awarded",
+    link: "https://drive.google.com/file/d/1DLwBv7MrzCKcE1hVvaWqAmj84YKhZXsG/view?usp=sharing",
+    iconName: "university"
   },
   {
     title: "Runner Up - Project Expo",
     issuer: "Industry Conclave VITB",
     issuedDate: "2024",
-    link: "#",
-    iconName: "university"
-  },
-  {
-    title: "500+ Problems Solved (DSA)",
-    issuer: "LeetCode & GFG",
-    issuedDate: "Ongoing",
-    link: "https://leetcode.com/",
-    iconName: "udemy"
-  },
-  {
-    title: "Limca & Indian Book of Records",
-    issuer: "Trendz Abacus",
-    issuedDate: "Awarded",
-    link: "#",
+    link: "https://drive.google.com/file/d/1f_-f4QeOgFDcGkl-lifzhxGxjN3-DJjT/view?usp=sharing",
     iconName: "university"
   }
 ];

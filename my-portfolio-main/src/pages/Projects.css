@@ -15,17 +15,22 @@
   background: #1e1e1e;
   border-radius: 12px;
   overflow: hidden;
-  box-shadow: 0 6px 15px rgba(160, 16, 16, 0.6); /* Base shadow */
+  box-shadow: 0 6px 15px rgba(160, 16, 16, 0.6);
+  /* Base shadow */
   opacity: 0;
   animation: fadeInUp 0.5s forwards ease-in-out;
   animation-delay: var(--delay);
   transition: transform 0.3s ease, box-shadow 0.3s ease;
+  display: flex;
+  flex-direction: column;
+  /* Ensure footer pushes down if needed */
 }
 
+/* Removed card hover scaling scale/cursor pointer since it's not a single link anymore */
 .project-card:hover {
-  transform: scale(1.05);
-  box-shadow: 0 10px 20px rgba(244, 0, 13, 0.6); /* Netflix shadow */
-  cursor: pointer;
+  transform: translateY(-5px);
+  box-shadow: 0 10px 20px rgba(244, 0, 13, 0.6);
+  /* Netflix shadow */
 }
 
 .project-image {
@@ -37,31 +42,37 @@
 }
 
 .project-card:hover .project-image {
-  transform: scale(1.05);
+  transform: scale(1.02);
 }
 
 .project-details {
   padding: 20px;
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
 }
 
 .project-details h3 {
   font-size: 1.2rem;
-  color: #e74e56;
-  margin-bottom: 10px;
   color: #e50914;
+  margin-bottom: 10px;
 }
 
 .project-details p {
   font-size: 0.8rem;
   margin-bottom: 15px;
-  line-height: 1.2rem;
+  line-height: 1.4rem;
+  color: #ccc;
+  flex-grow: 1;
+  /* Pushes links down if description is short */
 }
 
 .tech-used {
   display: flex;
   flex-wrap: wrap;
   gap: 15px;
-  margin-top: 20px;
+  margin-bottom: 20px;
+  /* Space before links */
 }
 
 .tech-badge {
@@ -80,7 +91,7 @@
   transform: scale(1.1);
   background-color: #e50914;
   color: #fff;
-  box-shadow: 0 4px 10px rgba(229, 9, 20, 0.6); /* Netflix shadow */
+  box-shadow: 0 4px 10px rgba(229, 9, 20, 0.6);
 }
 
 .tech-badge svg {
@@ -88,3 +99,46 @@
   font-size: 1.2rem;
 }
 
+/* New Link Buttons Styles */
+.project-links {
+  display: flex;
+  gap: 15px;
+  margin-top: auto;
+  /* Pushes to bottom of details */
+}
+
+.btn-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 8px 16px;
+  border-radius: 6px;
+  font-size: 0.9rem;
+  text-decoration: none;
+  font-weight: 500;
+  transition: all 0.2s ease-in-out;
+}
+
+.btn-github {
+  background-color: #333;
+  color: #fff;
+  border: 1px solid #444;
+}
+
+.btn-github:hover {
+  background-color: #444;
+  border-color: #fff;
+  color: #fff;
+}
+
+.btn-demo {
+  background-color: #e50914;
+  color: white;
+  border: 1px solid #e50914;
+}
+
+.btn-demo:hover {
+  background-color: #f40612;
+  box-shadow: 0 0 10px rgba(229, 9, 20, 0.5);
+  color: white;
+}

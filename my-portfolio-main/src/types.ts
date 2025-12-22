@@ -32,7 +32,9 @@ export interface Project {
   description: string;
   image: { url: string };
   techUsed: string;
-  link: string;
+  githubLink?: string;
+  demoLink?: string;
+  link?: string; // @deprecated
 }
 
 
@@ -55,7 +57,7 @@ export interface ContactMe {
   phoneNumber: string;
 }
 
-export interface Skill { 
+export interface Skill {
   name: string;
   category: string;
   description: string;
