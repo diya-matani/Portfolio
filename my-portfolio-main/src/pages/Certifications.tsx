@@ -13,51 +13,49 @@ const iconData: { [key: string]: JSX.Element } = {
 };
 
 // Combined list: resume certs + the ones you already had
+// Certifications List
 const staticCertifications: Certification[] = [
-  // From your resume
   {
     title: "Applied Machine Learning in Python",
     issuer: "Coursera",
-    issuedDate: "Dec 2023",
-    link: "#", // ← replace with your certificate URL if available
+    issuedDate: "2024",
+    link: "#",
     iconName: "coursera"
   },
   {
     title: "Cloud Computing",
     issuer: "NPTEL",
-    issuedDate: "Apr 2024",
-    link: "#", // ← replace with NPTEL certificate URL if you have one
-    iconName: "university"
-  },
-
-  // Existing items you had earlier (kept)
-  {
-    title: "Learning AI Through Visualization",
-    issuer: "Columbia+",
-    issuedDate: "June 10, 2025",
-    link: "https://badges.plus.columbia.edu/9ba19318-efe7-4e9c-9c47-69c63ce37cfe#acc.8QyDgfob",
+    issuedDate: "2024",
+    link: "#",
     iconName: "university"
   },
   {
-    title: "Data Structure And Algorithm",
-    issuer: "Coding Club India",
-    issuedDate: "May 2024",
-    link: "https://drive.google.com/file/d/1rW0rMIWkmjHSHPpVDqqWhKavoyCLnK0b/view?usp=drive_link",
+    title: "HackOn With Amazon (2nd Round)",
+    issuer: "Amazon / CodeHer'25",
+    issuedDate: "2024",
+    link: "#",
+    iconName: "ieee"
+  },
+  {
+    title: "Runner Up - Project Expo",
+    issuer: "Industry Conclave VITB",
+    issuedDate: "2024",
+    link: "#",
     iconName: "university"
   },
   {
-    title: "English and Academic Preparation - Pre-Collegiate",
-    issuer: "Rice University",
-    issuedDate: "May 23, 2023",
-    link: "https://coursera.org/share/6c5ff0f35554f915d48494048db16de0",
-    iconName: "coursera"
+    title: "500+ Problems Solved (DSA)",
+    issuer: "LeetCode & GFG",
+    issuedDate: "Ongoing",
+    link: "https://leetcode.com/",
+    iconName: "udemy"
   },
   {
-    title: "Microeconomics Principles",
-    issuer: "University of Illinois Urbana-Champaign",
-    issuedDate: "May 13, 2023",
-    link: "https://coursera.org/share/e7d43830f162082764620734a1b91bcb",
-    iconName: "coursera"
+    title: "Limca & Indian Book of Records",
+    issuer: "Trendz Abacus",
+    issuedDate: "Awarded",
+    link: "#",
+    iconName: "university"
   }
 ];
 
@@ -66,7 +64,7 @@ const Certifications: React.FC = () => {
 
   return (
     <div className="certifications-container" aria-live="polite">
-      <h1 className="certifications-heading">Certifications</h1>
+      <h1 className="certifications-heading">Certifications & Achievements</h1>
 
       <div className="certifications-grid">
         {certifications.map((cert, index) => (

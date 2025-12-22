@@ -9,43 +9,39 @@ import { TimelineItem } from '../types';
 
 const staticTimelineData: TimelineItem[] = [
   {
-    title: "Software Development Intern 🎯",
-    name: "BLG Technologies, Jodhpur",
-    techStack: "Flask, Python, MySQL, Pandas",
+    title: "AI / Python Intern",
+    name: "BLG Technologies (P) LTD",
+    techStack: "Python, Flask, PostgreSQL, ETL Pipelines",
     summaryPoints: [
-      "🛠 Developed a full Hostel Management Portal with student info, rooms, fees, admin analytics.",
-      "📊 Built dashboards & analysis panels using Pandas + SQL for operational insights.",
-      "⚡ Improved data pipeline efficiency and page load performance.",
-      "🤝 Worked with designers & backend team in an agile workflow."
+      "Built Python ETL pipelines for financial data transformation, reducing manual reconciliation by 40%.",
+      "Designed PostgreSQL schemas for AI-driven analytics and developed Flask-based backend services.",
+      "Converted raw operational data into ML-ready datasets for predictive modeling."
     ],
     dateRange: "Dec 2024 – Mar 2025",
     timelineType: "work",
   },
   {
-    title: "B.Tech — Computer Science & Engineering 🎓",
-    name: "Vellore Institute of Technology, Bhopal",
-    techStack: "",
+    title: "Position of Responsibility",
+    name: "Pahal Kids Classes | Google Developer Groups",
+    techStack: "Leadership, Community Management",
     summaryPoints: [
-      "📚 Studying core CS subjects: DSA, DBMS, OS, OOPs, ML.",
-      "🧠 Exploring AI/ML projects: engine rating prediction, voice chatbot, analytics dashboard.",
-      "🏅 Top 10 finalist at Industry Conclave Project Expo 2024.",
-      "💻 Active on LeetCode & GFG with strong DSA foundation."
+      "Pahal Kids Classes: Conducted classes and activities for workers' children, enhancing communication and leadership skills.",
+      "Technical Member at GDG: Contributing to technical initiatives and community development."
+    ],
+    dateRange: "Ongoing",
+    timelineType: "work",
+  },
+  {
+    title: "B.Tech in Computer Science and Engineering",
+    name: "Vellore Institute of Technology",
+    techStack: "CGPA: 8.87",
+    summaryPoints: [
+      "Studying core CS subjects: DSA, DBMS, OS, OOPs, ML.",
+      "Runner Up - Project Expo: Secured Top 10 position at Industry Conclave VITB 2024."
     ],
     dateRange: "2022 – 2026",
     timelineType: "education",
   },
-  {
-    title: "Higher Secondary — Science (PCM) 🥇",
-    name: "D.A.V. Public School, Kota",
-    techStack: "",
-    summaryPoints: [
-      "🏆 Scored above 90% with distinction in Mathematics.",
-      "📈 Built strong reasoning & analytical foundation.",
-      "✨ Participated in tech & academic competitions."
-    ],
-    dateRange: "2020 – 2021",
-    timelineType: "education",
-  }
 ];
 
 const WorkExperience: React.FC = () => {

@@ -34,32 +34,33 @@ import { Skill } from "../types";
 
 const skillsData: Skill[] = [
   // Languages
-  { name: "Python", description: "General-purpose language used for ML, scripting and backend", icon: "FaPython", category: "Languages" },
-  { name: "C", description: "Foundation in low-level programming and problem-solving", icon: "SiCplusplus", category: "Languages" },
-  { name: "C++", description: "Competitive programming & systems coding", icon: "SiCplusplus", category: "Languages" },
+  { name: "Python", description: "AI/ML, Scripting, Backend Development", icon: "FaPython", category: "Languages" },
+  { name: "SQL", description: "Database querying and management", icon: "FaDatabase", category: "Languages" },
 
-  // Web & Backend
-  { name: "React", description: "Frontend library for building UI (components & hooks)", icon: "FaReact", category: "Web & Backend" },
-  { name: "Flask", description: "Lightweight Python web framework for APIs & microservices", icon: "FaServer", category: "Web & Backend" },
-  { name: "Node.js (basics)", description: "JS runtime useful for small backend services", icon: "FaNodeJs", category: "Web & Backend" },
+  // AI / ML / GenAI
+  { name: "Machine Learning", description: "Model training, evaluation & explainable AI", icon: "SiScikitlearn", category: "AI & ML" },
+  { name: "GenAI", description: "Gemini Pro API, Prompt Engineering, RAG", icon: "FaChartBar", category: "AI & ML" },
+  { name: "Feature Engineering", description: "Data transformation for predictive modeling", icon: "FaToolbox", category: "AI & ML" },
 
-  // Data & Machine Learning
-  { name: "Pandas", description: "Data manipulation and analysis", icon: "SiPandas", category: "Data & ML" },
-  { name: "NumPy", description: "Numerical computing & arrays", icon: "SiNumpy", category: "Data & ML" },
-  { name: "scikit-learn", description: "Classical ML algorithms, pipelines & evaluation", icon: "SiScikitlearn", category: "Data & ML" },
-  { name: "TensorFlow", description: "Deep learning framework (experiments & models)", icon: "SiTensorflow", category: "Data & ML" },
-  { name: "PyTorch", description: "Deep learning library for research and prototyping", icon: "SiPytorch", category: "Data & ML" },
-  { name: "NLP", description: "Text processing, intent recognition and pipelines", icon: "FaChartBar", category: "Data & ML" },
+  // Libraries
+  { name: "Scikit-learn", description: "Standard ML algorithms & pipelines", icon: "SiScikitlearn", category: "Libraries" },
+  { name: "LightGBM", description: "Gradient boosting framework", icon: "FaChartBar", category: "Libraries" },
+  { name: "Pandas", description: "Data manipulation & analysis", icon: "SiPandas", category: "Libraries" },
+  { name: "NumPy", description: "Numerical computing", icon: "SiNumpy", category: "Libraries" },
+  { name: "SciPy", description: "Scientific computing", icon: "FaChartBar", category: "Libraries" },
+
+  // Backend & Deployment
+  { name: "Flask", description: "Microservices & API development", icon: "FaServer", category: "Backend & Deployment" },
+  { name: "Streamlit", description: "Rapid data app prototyping & deployment", icon: "FaLaptopCode", category: "Backend & Deployment" },
+
+  // Data Engineering
+  { name: "ETL Pipelines", description: "Data cleaning, validation & transformation workflows", icon: "FaChartBar", category: "Data Engineering" },
 
   // Databases & Tools
-  { name: "MySQL", description: "Relational database design & queries", icon: "SiMysql", category: "Databases & Tools" },
-  { name: "Git", description: "Version control and collaboration (GitHub workflows)", icon: "FaGitAlt", category: "Databases & Tools" },
-  { name: "GitHub", description: "Repo hosting, PRs & CI basics", icon: "FaGitAlt", category: "Databases & Tools" },
-  { name: "VS Code", description: "Primary IDE and productivity tooling", icon: "SiVisualstudiocode", category: "Databases & Tools" },
-
-  // Other / Supporting
-  { name: "HTML & CSS", description: "Markup and styling (responsive layouts)", icon: "SiHtml5", category: "Other" },
-  { name: "Data Visualization", description: "Matplotlib / Seaborn for charts & dashboards", icon: "FaChartBar", category: "Other" },
+  { name: "PostgreSQL", description: "Advanced relational database management", icon: "SiPostgresql", category: "Databases & Tools" },
+  { name: "MySQL", description: "Standard RDBMS", icon: "SiMysql", category: "Databases & Tools" },
+  { name: "Git & GitHub", description: "Version control & collaboration", icon: "FaGitAlt", category: "Databases & Tools" },
+  { name: "VS Code", description: "Primary development environment", icon: "SiVisualstudiocode", category: "Databases & Tools" },
 ];
 
 const iconMap: { [key: string]: JSX.Element } = {
@@ -87,7 +88,7 @@ const iconMap: { [key: string]: JSX.Element } = {
 
 const Skills: React.FC = () => {
   // group and keep a predictable order of categories
-  const orderedCategories = ["Languages", "Web & Backend", "Data & ML", "Databases & Tools", "Other"];
+  const orderedCategories = ["Languages", "AI & ML", "Libraries", "Backend & Deployment", "Data Engineering", "Databases & Tools"];
   const grouped: Record<string, Skill[]> = skillsData.reduce((acc, skill) => {
     if (!acc[skill.category]) acc[skill.category] = [];
     acc[skill.category].push(skill);
@@ -121,7 +122,7 @@ const Skills: React.FC = () => {
                     {skill.name.split("").map((letter, i) => (
                       <span
                         key={i}
-                        className="letter"
+                        className="skill-letter"
                         style={{ animationDelay: `${i * 0.03}s` }} // slightly faster animation
                       >
                         {letter}

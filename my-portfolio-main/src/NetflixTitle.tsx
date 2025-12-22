@@ -33,15 +33,25 @@ const NetflixTitle: React.FC = () => {
       aria-label="Play Netflix intro and continue"
     >
       <div className="netflix-title" aria-hidden={!isClicked}>
-        {NAME.split('').map((ch, i) => (
-          <span
-            key={i}
-            className="letter"
-            style={{ animationDelay: `${i * 0.08}s` }}
-          >
-            {ch === ' ' ? '\u00A0' : ch}
-          </span>
-        ))}
+        {NAME.split('').map((ch, i) => {
+          // Arc calculation
+          const centerIndex = (NAME.length - 1) / 2;
+          const rotateDeg = (i - centerIndex) * 3; // 3 degrees per letter
+          const translateY = Math.abs(i - centerIndex) * 2; // Curve up at ends
+
+          return (
+            <span
+              key={i}
+              className="nf-letter"
+              style={{
+                animationDelay: `${i * 0.08}s`,
+                transform: `rotate(${rotateDeg}deg) translateY(${translateY}px)`
+              }}
+            >
+              {ch === ' ' ? '\u00A0' : ch}
+            </span>
+          );
+        })}
       </div>
       {/* Small helper hint when not clicked */}
       {!isClicked && <div className="click-hint">Click to start</div>}

@@ -20,6 +20,9 @@ import stackhiveimg from '../images/stackhiveimg.png';
 
 import { GrDeploy, GrKubernetes } from "react-icons/gr";
 
+import utilisationImage from '../images/utilisation.png';
+import crmImage from '../images/crm.png';
+
 const techIcons: { [key: string]: JSX.Element } = {
   "Nextjs": <RiNextjsFill />,
   "Next.js": <RiNextjsFill />,
@@ -98,34 +101,26 @@ const staticProjects: Project[] = [
   {
     title: "Engine Rating Prediction",
     description:
-      "Regression models for predicting engine ratings using feature engineering and ensemble methods (Random Forest, XGBoost). Performed cross-validation, hyperparameter tuning and visualized feature importance to explain model predictions.",
-    image: { url: mriImage },
-    techUsed: "Python, scikit-learn, XGBoost, SQL, Pandas",
-    link: "#" // replace with repo/demo if available
+      "End-to-end ML system using LightGBM to predict vehicle engine health from 60+ real-world parameters (R²=0.7). Performed feature engineering & tuning for production-ready predictions.",
+    image: { url: mriImage }, // Use placeholder or relevant image if available
+    techUsed: "Python, Streamlit, LightGBM, Scikit-Learn",
+    link: "https://github.com/diya-matani/Engine-Rating-Prediction"
   },
   {
-    title: "AI Voice Chatbot",
+    title: "Energy Insight",
     description:
-      "A conversational voice-enabled chatbot that handles speech input, intent recognition and contextual replies. Integrated speech recognition and response generation for a smooth voice interaction experience.",
-    image: { url: chatImage },
-    techUsed: "Python, NLP, Speech Recognition, Flask, Transformers",
-    link: "#" // replace with repo/demo if available
+      "AI-based energy optimization system using Random Forest to predict heating/cooling loads. Integrated Google Gemini Pro API to generate human-readable energy-saving recommendations.",
+    image: { url: utilisationImage }, // Utilisation chart fits Energy theme
+    techUsed: "Python, Streamlit, Scikit-learn, Google Gemini Pro API",
+    link: "https://github.com/diya-matani/Energy-Insight-"
   },
   {
-    title: "Marketing Campaign Performance Analytics",
+    title: "Marketing Campaign Analytics",
     description:
-      "End-to-end analytics for marketing campaigns: data cleaning, exploratory analysis, visualizations and ROI-driven recommendations to improve conversion. Built dashboards to summarize key KPIs.",
-    image: { url: nodeImage },
-    techUsed: "Python, Pandas, Matplotlib, Seaborn, SQL",
-    link: "#" // replace with repo/demo if available
-  },
-  {
-    title: "Hostel Management Portal (Internship)",
-    description:
-      "Built and deployed a production-ready Hostel Management Portal during internship at BLG Technologies. Features include student & room management, fee tracking and analytics dashboards for operations.",
-    image: { url: interImage },
-    techUsed: "Flask, Python, Pandas, SQL",
-    link: "https://hostels.deekshaclasses.com/admin"
+      "Analyzed 64,000+ customer records using Logistic Regression to predict conversion probability. Validated insights with A/B testing (Chi-Square, T-Test) for data-driven decision making.",
+    image: { url: crmImage }, // CRM fits Marketing theme
+    techUsed: "Python, Streamlit, Scikit-learn, Statistical Testing",
+    link: "https://github.com/diya-matani/Market-Campaign-Performance-Analytics"
   }
 ];
 

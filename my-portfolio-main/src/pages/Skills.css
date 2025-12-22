@@ -56,7 +56,8 @@
 .skill-card:hover,
 .skill-card:focus {
   transform: translateY(-6px) scale(1.02);
-  box-shadow: 0 12px 30px rgba(229, 9, 20, 0.22); /* subtle netflix-red glow */
+  box-shadow: 0 12px 30px rgba(229, 9, 20, 0.22);
+  /* subtle netflix-red glow */
   cursor: default;
   outline: none;
 }
@@ -89,7 +90,7 @@
 }
 
 /* Each letter animation */
-.letter {
+.skill-letter {
   display: inline-block;
   opacity: 0;
   transform: translateY(-18px);
@@ -117,11 +118,25 @@
 }
 
 /* stagger category animation delay (works when multiple categories are present) */
-.category-title[data-order="1"] { animation-delay: 0.15s; }
-.category-title[data-order="2"] { animation-delay: 0.30s; }
-.category-title[data-order="3"] { animation-delay: 0.45s; }
-.category-title[data-order="4"] { animation-delay: 0.60s; }
-.category-title[data-order="5"] { animation-delay: 0.75s; }
+.category-title[data-order="1"] {
+  animation-delay: 0.15s;
+}
+
+.category-title[data-order="2"] {
+  animation-delay: 0.30s;
+}
+
+.category-title[data-order="3"] {
+  animation-delay: 0.45s;
+}
+
+.category-title[data-order="4"] {
+  animation-delay: 0.60s;
+}
+
+.category-title[data-order="5"] {
+  animation-delay: 0.75s;
+}
 
 /* Keyframes */
 @keyframes dropIn {
@@ -140,17 +155,30 @@
 
 /* Responsive tweaks */
 @media (max-width: 600px) {
-  .skills-heading { font-size: 1.8rem; }
-  .skill-card { padding: 14px; min-height: 120px; }
-  .icon { font-size: 1.6rem; }
-  .skill-name { font-size: 0.95rem; }
+  .skills-heading {
+    font-size: 1.8rem;
+  }
+
+  .skill-card {
+    padding: 14px;
+    min-height: 120px;
+  }
+
+  .icon {
+    font-size: 1.6rem;
+  }
+
+  .skill-name {
+    font-size: 0.95rem;
+  }
 }
 
 /* Respect user preference for reduced motion */
 @media (prefers-reduced-motion: reduce) {
+
   .skills-heading,
   .category-title,
-  .letter,
+  .skill-letter,
   .skill-card {
     animation: none !important;
     transition: none !important;

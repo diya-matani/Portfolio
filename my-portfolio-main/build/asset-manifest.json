@@ -1,0 +1,29 @@
+{
+  "files": {
+    "main.css": "/static/css/main.f24b5489.css",
+    "main.js": "/static/js/main.6dd223ae.js",
+    "static/js/453.b0cd7502.chunk.js": "/static/js/453.b0cd7502.chunk.js",
+    "static/media/stackhiveimg.png": "/static/media/stackhiveimg.96620315d84fe0e44a7f.png",
+    "static/media/mri-classification.png": "/static/media/mri-classification.e83a2b34c3bd0c658ce8.png",
+    "static/media/node-image-interface.png": "/static/media/node-image-interface.649bd67cd932c3250d65.png",
+    "static/media/Hotelcalifornia.jpg": "/static/media/Hotelcalifornia.a1b2e230d97c00441c76.jpg",
+    "static/media/eat_that_frog.jpg": "/static/media/eat_that_frog.813c8f47ac052b6d620c.jpg",
+    "static/media/grey.png": "/static/media/grey.bbfd7fb8e095529e355c.png",
+    "static/media/blue.png": "/static/media/blue.9b293a4a6ef065903a8f.png",
+    "static/media/netflix-sound.mp3": "/static/media/netflix-sound.a13a4aedfb5da5a27f04.mp3",
+    "static/media/yellow.png": "/static/media/yellow.2631c5cf63f02f6bbfbf.png",
+    "static/media/red.png": "/static/media/red.6138d0c52611186c9d03.png",
+    "static/media/chris.jpg": "/static/media/chris.c8b8e648ee695596bdd3.jpg",
+    "static/media/alchemist.jpg": "/static/media/alchemist.9c7b8d90f87afb9eb1f9.jpg",
+    "static/media/atomic_habits.jpg": "/static/media/atomic_habits.1e9739efe6a8eca8240a.jpg",
+    "static/media/rich_dad_poor_dad.jpg": "/static/media/rich_dad_poor_dad.3e652088b5ec2c6f8709.jpg",
+    "index.html": "/index.html",
+    "main.f24b5489.css.map": "/static/css/main.f24b5489.css.map",
+    "main.6dd223ae.js.map": "/static/js/main.6dd223ae.js.map",
+    "453.b0cd7502.chunk.js.map": "/static/js/453.b0cd7502.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.f24b5489.css",
+    "static/js/main.6dd223ae.js"
+  ]
+}

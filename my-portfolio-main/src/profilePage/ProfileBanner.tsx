@@ -5,15 +5,11 @@ import MoreInfoButton from '../components/MoreInfoButton';
 import GithubButton from '../components/GithubButton';
 
 const bannerData = {
-  headline: "Diya Matani – Fullstack Developer | CSE @ VIT Bhopal",
+  headline: "Diya Matani – AI/ML Engineer | Python Developer",
 
-  profileSummary: `CSE student at VIT Bhopal with strong skills in Python, Data Analytics, Machine Learning, and Web Development. 
-Passionate about building real-world solutions using Flask, React (basics), Pandas, NumPy, and SQL. 
-Completed a Software Development Internship at BLG Technologies, where I developed a complete Hostel Management Portal with analytics dashboards. 
-Experienced in AI and analytics-based projects like Engine Rating Prediction, Voice Chatbot, and Marketing Campaign Performance Analysis. 
-Motivated learner with a strong foundation in DSA and problem-solving (LeetCode, GFG).`,
+  profileSummary: `B.Tech CSE student at VIT Bhopal with strong expertise in Artificial Intelligence, Machine Learning, and Data Engineering. Interned at BLG Technologies, where I built automated ETL pipelines and backend services for financial data. Passionate about solving complex problems using Python, Generative AI (Gemini Pro), and SQL. Developed impactful projects in predictive modeling and energy optimization. Consistent high achiever with 500+ coding problems solved and national recognition in mental arithmetic.`,
 
-  resumeLink: "https://drive.google.com/file/d/1297WKVZyD79oST2KLINwktz35__z0NuF/view?usp=sharing",
+  resumeLink: "https://github.com/diya-matani/Resume_Diya_Matani/blob/main/Diya_Matani_AI_Python_Intern_Resume.pdf",
   linkedinLink: "https://www.linkedin.com/in/diya-matani",
   githubLink: "https://github.com/diya-matani"
 };
