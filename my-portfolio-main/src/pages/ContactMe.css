@@ -1,0 +1,170 @@
+.contact-container {
+  padding: 100px 40px;
+  background-color: #141414;
+  color: #e6e6e6;
+  animation: fadeIn 0.8s ease-in-out;
+}
+
+/* Layout: Two columns for top section */
+.top-section {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 40px;
+  margin-bottom: 50px;
+}
+
+/* LEFT: LinkedIn */
+.linkedin-badge-wrapper {
+  min-width: 320px;
+  max-width: 360px;
+}
+
+/* RIGHT: Email/Phone */
+.contact-info {
+  min-width: 320px;
+  max-width: 500px;
+}
+
+/* Header */
+.contact-header {
+  font-size: 1.2rem;
+  color: #ccc;
+  margin-bottom: 25px;
+  text-align: left;
+}
+
+.contact-details {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.contact-item {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  background: #1e1e1e;
+  padding: 10px 20px;
+  border-radius: 25px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  cursor: pointer;
+}
+
+.contact-item:hover {
+  transform: scale(1.05);
+  box-shadow: 0 8px 20px rgba(214, 43, 43, 0.6);
+}
+
+.contact-icon {
+  font-size: 1.5rem;
+  color: #d62b2b;
+}
+
+.contact-link {
+  color: #fff;
+  font-size: 1.1rem;
+  text-decoration: none;
+}
+
+.contact-link:hover {
+  text-decoration: underline;
+}
+
+.contact-fun {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 1.1rem;
+  color: #e6e6e6;
+}
+
+.coffee-icon {
+  font-size: 2rem;
+  color: #ff9900;
+  animation: swing 1s infinite ease-in-out;
+}
+
+/* Center the form */
+.form-section {
+  display: flex;
+  justify-content: center;
+}
+
+/* Form Styling */
+.contact-form {
+  background: #0f1117;
+  padding: 30px 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.4);
+  color: #fff;
+  width: 100%;
+  max-width: 600px;
+}
+
+.contact-form h2 {
+  margin-bottom: 20px;
+  font-size: 1.5rem;
+}
+
+.contact-form label {
+  display: block;
+  text-align: left;
+  margin: 10px 0 5px;
+  font-weight: bold;
+}
+
+.contact-form input,
+.contact-form textarea {
+  width: 100%;
+  padding: 12px 10px;
+  border: none;
+  border-radius: 5px;
+  margin-bottom: 15px;
+  background: #fff;
+  color: #000;
+  font-size: 1rem;
+}
+
+.contact-form button {
+  background-color: #d62b2b;
+  color: #fff;
+  padding: 12px 20px;
+  border: none;
+  border-radius: 8px;
+  font-size: 1.1rem;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-top: 10px;
+  transition: background 0.3s;
+}
+
+.contact-form button:hover {
+  background-color: #a32222;
+}
+
+/* Animations */
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes swing {
+
+  0%,
+  100% {
+    transform: rotate(0deg);
+  }
+
+  50% {
+    transform: rotate(30deg);
+  }
+}

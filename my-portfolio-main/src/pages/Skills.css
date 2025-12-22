@@ -1,0 +1,160 @@
+/* src/pages/Skills.css - improved & bug-fixed */
+:root {
+  --netflix-red: #e50914;
+  --bg-card: #1e1e1e;
+  --text-light: #e6e6e6;
+  --muted: #999;
+  --container-max: 1100px;
+}
+
+/* Container */
+.skills-container {
+  padding: 40px 20px;
+  text-align: center;
+  color: #fff;
+  max-width: var(--container-max);
+  margin: auto;
+  box-sizing: border-box;
+}
+
+/* Heading */
+.skills-heading {
+  font-size: 2.5rem;
+  color: var(--netflix-red);
+  margin-bottom: 30px;
+  opacity: 0;
+  transform: translateY(20px);
+  animation: fadeSlideIn 0.9s ease forwards;
+}
+
+/* Grid of skill cards */
+.skills-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+  gap: 20px;
+  margin-top: 20px;
+  align-items: start;
+}
+
+/* Card */
+.skill-card {
+  background-color: var(--bg-card);
+  border-radius: 10px;
+  padding: 20px;
+  text-align: center;
+  color: var(--text-light);
+  transition: transform 0.28s ease, box-shadow 0.28s ease;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.35);
+  min-height: 150px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  gap: 8px;
+}
+
+/* Hover + focus */
+.skill-card:hover,
+.skill-card:focus {
+  transform: translateY(-6px) scale(1.02);
+  box-shadow: 0 12px 30px rgba(229, 9, 20, 0.22); /* subtle netflix-red glow */
+  cursor: default;
+  outline: none;
+}
+
+/* Keyboard accessibility */
+.skill-card:focus {
+  box-shadow: 0 12px 30px rgba(229, 9, 20, 0.30);
+  transform: translateY(-6px) scale(1.02);
+}
+
+/* Icon */
+.icon {
+  font-size: 2.1rem;
+  color: var(--netflix-red);
+  margin-bottom: 6px;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Skill name styling with animated letters */
+.skill-name {
+  display: flex;
+  justify-content: center;
+  gap: 2px;
+  font-weight: 600;
+  font-size: 1.05rem;
+  line-height: 1.2;
+  color: var(--text-light);
+}
+
+/* Each letter animation */
+.letter {
+  display: inline-block;
+  opacity: 0;
+  transform: translateY(-18px);
+  animation: dropIn 0.45s forwards ease-out;
+}
+
+/* Description */
+.skill-description {
+  font-size: 0.9rem;
+  color: var(--muted);
+  margin-top: 6px;
+}
+
+/* Category title */
+.category-title {
+  font-size: 1.6rem;
+  color: var(--text-light);
+  margin: 28px 0 16px;
+  border-bottom: 2px solid var(--netflix-red);
+  padding-bottom: 6px;
+  display: inline-block;
+  opacity: 0;
+  transform: translateY(20px);
+  animation: fadeSlideIn 0.8s ease forwards;
+}
+
+/* stagger category animation delay (works when multiple categories are present) */
+.category-title[data-order="1"] { animation-delay: 0.15s; }
+.category-title[data-order="2"] { animation-delay: 0.30s; }
+.category-title[data-order="3"] { animation-delay: 0.45s; }
+.category-title[data-order="4"] { animation-delay: 0.60s; }
+.category-title[data-order="5"] { animation-delay: 0.75s; }
+
+/* Keyframes */
+@keyframes dropIn {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fadeSlideIn {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Responsive tweaks */
+@media (max-width: 600px) {
+  .skills-heading { font-size: 1.8rem; }
+  .skill-card { padding: 14px; min-height: 120px; }
+  .icon { font-size: 1.6rem; }
+  .skill-name { font-size: 0.95rem; }
+}
+
+/* Respect user preference for reduced motion */
+@media (prefers-reduced-motion: reduce) {
+  .skills-heading,
+  .category-title,
+  .letter,
+  .skill-card {
+    animation: none !important;
+    transition: none !important;
+    transform: none !important;
+    opacity: 1 !important;
+  }
+}
