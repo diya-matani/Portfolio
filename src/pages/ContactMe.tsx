@@ -16,29 +16,15 @@ const ContactMe: React.FC = () => {
 
   const sendEmail = (e: React.FormEvent) => {
     e.preventDefault();
-
-    if (!formRef.current) return;
-
-    const formData = new FormData(formRef.current);
-    const templateParams = {
-      from_name: formData.get('from_name'),
-      reply_to: formData.get('reply_to'),
-      message: formData.get('message'),
-    };
-
-    console.log("Sending email with params:", templateParams);
-
-    emailjs.send(
+    emailjs.sendForm(
       'service_4juf53k',
       'template_ifz0kdi',
-      templateParams,
+      formRef.current!,
       'Lb66oLXTir33I1zZl'
-    ).then((response) => {
-      console.log('SUCCESS!', response.status, response.text);
+    ).then(() => {
       alert("Message sent successfully!");
       formRef.current?.reset();
     }, (error) => {
-      console.log('FAILED...', error);
       alert("Failed to send message: " + error.text);
     });
   };
@@ -105,10 +91,10 @@ const ContactMe: React.FC = () => {
           <h2>Contact Me</h2>
 
           <label>Your Name</label>
-          <input type="text" name="from_name" placeholder="Enter name" required />
+          <input type="text" name="name" placeholder="Enter name" required />
 
           <label>Your Email</label>
-          <input type="email" name="reply_to" placeholder="Enter email" required />
+          <input type="email" name="email" placeholder="Enter email" required />
 
           <label>Your Message</label>
           <textarea
