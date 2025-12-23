@@ -91,10 +91,10 @@ const ContactMe: React.FC = () => {
           <h2>Contact Me</h2>
 
           <label>Your Name</label>
-          <input type="text" name="name" placeholder="Enter name" required />
+          <input type="text" name="from_name" placeholder="Enter name" required />
 
           <label>Your Email</label>
-          <input type="email" name="email" placeholder="Enter email" required />
+          <input type="email" name="reply_to" placeholder="Enter email" required />
 
           <label>Your Message</label>
           <textarea
