@@ -11,7 +11,7 @@ interface BlogPost {
 }
 
 const blogs: BlogPost[] = [
-  // All blog posts commented out — page shows "Coming Soon", exactly like Anupam's
+  // All blog posts commented out — page shows "Coming Soon"
   // {
   //   title: "Make Your Rails Console Look Better",
   //   platform: "Medium",
