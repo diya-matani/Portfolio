@@ -17,10 +17,10 @@ const ContactMe: React.FC = () => {
   const sendEmail = (e: React.FormEvent) => {
     e.preventDefault();
     emailjs.sendForm(
-      'service_4juf53k',
-      'template_ifz0kdi',
+      'service_hiqfxgt',
+      'template_6a9b3ub',
       formRef.current!,
-      'Lb66oLXTir33I1zZl'
+      'awcEhr--q7eutEoPf'
     ).then(() => {
       alert("Message sent successfully!");
       formRef.current?.reset();
