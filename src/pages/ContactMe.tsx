@@ -1,7 +1,7 @@
 import React, { useEffect, useRef } from 'react';
 import './ContactMe.css';
 import { FaEnvelope, FaPhoneAlt, FaCoffee } from 'react-icons/fa';
-import emailjs from 'emailjs-com';
+import emailjs from '@emailjs/browser';
 
 const staticUserData = {
   name: "Diya Matani",
