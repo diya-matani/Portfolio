@@ -1,11 +1,12 @@
 {
   "files": {
-    "main.css": "/static/css/main.f24b5489.css",
-    "main.js": "/static/js/main.6dd223ae.js",
+    "main.css": "/static/css/main.c777cea0.css",
+    "main.js": "/static/js/main.dce8a938.js",
     "static/js/453.b0cd7502.chunk.js": "/static/js/453.b0cd7502.chunk.js",
-    "static/media/stackhiveimg.png": "/static/media/stackhiveimg.96620315d84fe0e44a7f.png",
-    "static/media/mri-classification.png": "/static/media/mri-classification.e83a2b34c3bd0c658ce8.png",
-    "static/media/node-image-interface.png": "/static/media/node-image-interface.649bd67cd932c3250d65.png",
+    "static/media/optiroute.png": "/static/media/optiroute.5977d7c8bdda8c023d01.png",
+    "static/media/engine-rating.png": "/static/media/engine-rating.2a1b0cf16a53cb715276.png",
+    "static/media/energy-insight.png": "/static/media/energy-insight.e731b589c7f9c525cdb1.png",
+    "static/media/crm.png": "/static/media/crm.8c4b57891044a02275ee.png",
     "static/media/Hotelcalifornia.jpg": "/static/media/Hotelcalifornia.a1b2e230d97c00441c76.jpg",
     "static/media/eat_that_frog.jpg": "/static/media/eat_that_frog.813c8f47ac052b6d620c.jpg",
     "static/media/grey.png": "/static/media/grey.bbfd7fb8e095529e355c.png",
@@ -18,12 +19,12 @@
     "static/media/atomic_habits.jpg": "/static/media/atomic_habits.1e9739efe6a8eca8240a.jpg",
     "static/media/rich_dad_poor_dad.jpg": "/static/media/rich_dad_poor_dad.3e652088b5ec2c6f8709.jpg",
     "index.html": "/index.html",
-    "main.f24b5489.css.map": "/static/css/main.f24b5489.css.map",
-    "main.6dd223ae.js.map": "/static/js/main.6dd223ae.js.map",
+    "main.c777cea0.css.map": "/static/css/main.c777cea0.css.map",
+    "main.dce8a938.js.map": "/static/js/main.dce8a938.js.map",
     "453.b0cd7502.chunk.js.map": "/static/js/453.b0cd7502.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.f24b5489.css",
-    "static/js/main.6dd223ae.js"
+    "static/css/main.c777cea0.css",
+    "static/js/main.dce8a938.js"
   ]
 }
